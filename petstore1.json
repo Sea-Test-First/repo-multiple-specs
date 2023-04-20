@@ -27,7 +27,7 @@
             "name": "limit",
             "in": "query",
             "description": "How many items to return at one time (max 300)",
-            "required": false,
+            "required": true,
             "schema": {
               "type": "integer",
               "maximum": 300,
@@ -36,7 +36,7 @@
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "A paged array of pets",
             "headers": {
               "x-next": {
@@ -119,7 +119,7 @@
             }
           },
           "default": {
-            "description": "unexpected error",
+            "description": "unexpected error!",
             "content": {
               "application/json": {
                 "schema": {
