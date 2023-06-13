@@ -2,11 +2,11 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.2",
-    "title": "Swagger Petstore 1",
+    "title": "Swagger Petstore 1.0000",
     "license": {
       "name": "CC0-1.0"
     },
-    "description": "Swagger Petstore 1 description. Et dolore ex amet et velit duis pariatur id laborum commodo fugiat enim magna."
+    "description": "The Real Swagger Petstore 1 description. Et dolore ex amet et velit duis pariatur id laborum commodo fugiat enim magna."
   },
   "servers": [
     {
