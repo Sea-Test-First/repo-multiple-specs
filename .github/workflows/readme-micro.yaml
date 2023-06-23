@@ -15,7 +15,7 @@ jobs:
       # Run GitHub Action to sync all OpenAPI files in the repo
       # uses: readmeio/readme-micro@v[2].[0-9]+.[0-9]+
       - name: GitHub Action
-        uses: readmeio/readme-micro@send-action-version
+        uses: readmeio/readme-micro@v2.1.1
         env:
           BASE_URL: ${{ vars.BASE_URL }}
         with:
