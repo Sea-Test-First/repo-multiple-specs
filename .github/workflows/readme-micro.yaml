@@ -1,10 +1,11 @@
 name: ReadMe Micro
 
-# Run workflow for every push to the `main` branch
+# Run workflow to sync OpenAPI files for every push to the `main` branch
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -14,8 +15,6 @@ jobs:
 
       # Run GitHub Action to sync all OpenAPI files in the repo
       - name: GitHub Action
-        uses: readmeio/readme-micro@v2.3.0
-        env:
-          BASE_URL: ${{ vars.BASE_URL }}
+        uses: readmeio/readme-micro@v2.6.0
         with:
-          readme-micro: "'**/*.{yaml,yml,json}' --key=${{ secrets.README_MICRO_SECRET }}"
+          readme-micro: "'**/*.{yaml,yml,json}' --key=\${{ secrets.README_MICRO_SECRET }}"
